@@ -37,7 +37,7 @@ function montarCadastro() {
         "endereco": "Rua Harry Brehmer, 110",
         "nascimento": "19/02/2005",
         "sexo": "Feminino",
-        "corFavorita": "Verde lebisco",
+        "corFavorita": "Verde",
         "email": "mariaclaraperon@gmail.com",
         "telefone": "47123456789",
         "senha": "teste123"}`
