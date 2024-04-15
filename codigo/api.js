@@ -28,6 +28,7 @@ function montarCadastro() {
     let password = document.getElementById('password').value;
 
     return `{"nome": "` + nome + `",
+        "sobrenome": "` + Sobrenome + `",
         "rua": "` + rua + `",
         "bairro": "` + bairro + `",
         "cidade": "` + cidade + `",
