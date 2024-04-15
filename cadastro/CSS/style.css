@@ -11,7 +11,6 @@
     font-family: Poppins, sans-serif;
 }
 
-
 body {
     padding: 20px;
     display: flex;
@@ -20,26 +19,21 @@ body {
     min-height: 100vh;    
 }
 
-#body{
-    background-color: #0a7273;
-}
-
 header {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-
     position: fixed;
     width: 100%;
     top: 0;
-   }
+}
 
 #container{
     position: relative;
-    max-width: 1000px;
+    max-width:50%;
     width: 100%;
     background-color: #e9e3d5;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
 }
 
 #titulo{
@@ -138,11 +132,63 @@ margin-bottom: 8px;
     background-color: #539c9d;
 }
 
-.footer{
-    position: absolute;
-    bottom:0;
-    width:100%; 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.container{
+    margin-top: 60px;
 }
+
+.site-header{
+    position: relative;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#span-senha{
+    position: absolute;
+    right: 40px;
+    transform: translate(0,-50%);
+    top: 90%;
+    cursor:pointer;
+}
+
+#span-senha-senha{
+    position: absolute;
+    right: 40px;
+    transform: translate(0,-50%);
+    top: 80.8%;
+    cursor:pointer;
+}
+
+#span-senha-login{
+    position: absolute;
+    right: 40px;
+    transform: translate(0,-50%);
+    top: 70%;
+    cursor:pointer;
+}
+
+.fa{
+    font-size: 20px;
+    color: #0a7273 ; 
+     
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 8rem;      
+    margin-top: 80px;
+    bottom: 0;
+    left: 0;
+}
+
 
 
 @media screen  and (max-width: 500px)
