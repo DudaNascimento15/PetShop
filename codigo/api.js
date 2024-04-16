@@ -90,24 +90,24 @@ function logar() {
   return usuarioLogado;
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   verificarLocalStorage();
 });
 
 function verificarLocalStorage() {
-  const usuarioLogado = localStorage.getItem("cadastros");
+  const cadastrado = localStorage.getItem("cadastros");
+  const usuarioLogado = localStorage.getItem("usuarioLogado");
   const botao = document.getElementById("meuBotao");
 
-  console.log(usuarioLogado);
-  console.log(botao.innerHTML);
-
-  if (usuarioLogado) {
-    botao.innerHTML =
-      '<a href="../cadastro/login.html"  class="btn btn-sm ml-auto botao-azul" type="button">Login</a>';
+  if (cadastrado && !usuarioLogado) {
+    botao.innerHTML = `<a href="../cadastro/login.html" class="btn btn-sm ml-auto botao-azul" type="button">Login</a>`;
+  } else if (usuarioLogado) {
+    const usuario = JSON.parse(usuarioLogado); // Converter a string JSON de volta para objeto
+    botao.innerHTML = `
+      <img src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/10/erik-jan-leusink-IbPxGLgJiMI-unsplash-scaled.jpg" style="height:20px">
+      <p>Bem-vindo ${usuario.nome}</p>`;
   } else {
-    botao.innerHTML =
-      '<a href="../cadastro/cad.html"  class="btn btn-sm ml-auto botao-azul" type="button">Cadastro</a>';
+    botao.innerHTML = `<a href="../cadastro/cad.html" class="btn btn-sm ml-auto botao-azul" type="button">Cadastro</a>
+      <p>Usuário não logado</p>`;
   }
 }
