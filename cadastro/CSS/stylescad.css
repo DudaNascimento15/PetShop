@@ -137,12 +137,12 @@ input[type="checkbox"] {
     background-color: #539c9d;
 }
 
-#page-container {
+#page-conteudo {
     position: relative;
     min-height: 100vh;
   }
 
-.container{
+.conteudo{
     margin-top: 60px;
 }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/stylescad.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -16,7 +16,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastro</title>
-    <script src="/codigo/api.js"></script>
+    <script src="/codigo/api.js"></script>    
+    <script src="js/validarCEP.js"></script>
+    <script src="js/validarPwd.js"></script>
+    <script src="js/validarCampos.js"></script>
 </head>
 
 <body id="body">
@@ -69,8 +72,8 @@
             </div>
         </nav>
     </header>
-
-    <section class="container" id="container">
+<main>
+    <section class="conteudo" id="conteudo">
         <h1 class="titulo" id="titulo">Cadastro</h1>
         <form action="#" class="form" id="form" onsubmit="salvarCadastro()">
 
@@ -102,31 +105,59 @@
                         required>
                 </div>
             </div>
-
-            <div class="gender-box" id="gender-box">
-                <label id="titulo-genero" for="opcao-genero"><strong>Gênero</strong></label>
-                <div class="form-check" id="opcao-genero">
-                    <div class="genero" id="genero">
-                        <input class="form-check-input" type="radio" name="rdFemino" id="rdFemino">
-                        <label class="form-check-label" for="rdFemino">
-                            Feminino
-                        </label>
+            
+            <div class="column" id="column">
+                <div class="gender-box">
+                    <label class="titulo-genero" for="opcao-genero"><strong>Gênero</strong></label>
+                    <div class="form-check opcao-genero">
+                        <div class="genero">
+                            <input class="form-check-input" type="radio" name="rdGenero" id="rdFeminino">
+                            <label class="form-check-label" for="rdFeminino">
+                                Feminino
+                            </label>
+                        </div>
+                        <div class="genero">
+                            <input class="form-check-input" type="radio" name="rdGenero" id="rdMasculino">
+                            <label class="form-check-label" for="rdMasculino">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="genero">
+                            <input class="form-check-input" type="radio" name="rdGenero" id="rdOutros" checked>
+                            <label class="form-check-label" for="rdOutros">
+                                Prefiro não dizer
+                            </label>
+                        </div>
                     </div>
-
-                    <div class="genero" id="genero">
-                        <input class="form-check-input" type="radio" name="rdMasculino" id="rdMasculino">
-                        <label class="form-check-label" for="rdMasculino">
-                            Masculino
-                        </label>
-                    </div>
-                    <div class="genero" id="genero">
-                        <input class="form-check-input" type="radio" name="rdOutros" id="rdOutros" checked>
-                        <label class="form-check-label" for="rdOutros">
-                            Prefiro não dizer
-                        </label>
+                </div>
+            
+                <div class="opestcivil-box">
+                    <label class="titulo-opcaociv" for="estado-civil"><strong>Estado Civil</strong></label>
+                    <div class="form-check estado-civil">
+                        <div class="estcivil">
+                            <input type="checkbox" id="opSolteiro" name="opSolteiro" value="solteiro">
+                            <label for="opSolteiro">Solteiro</label>
+                        </div>
+                        <div class="estcivil">
+                            <input type="checkbox" id="opCasado" name="opCasado" value="casado">
+                            <label for="opCasado">Casado</label>
+                        </div>
+                        <div class="estcivil">
+                            <input type="checkbox" id="opSeparado" name="opSeparado" value="separado">
+                            <label for="opSeparado">Separado</label>
+                        </div>
+                        <div class="estcivil">
+                            <input type="checkbox" id="opDivorciado" name="opDivorciado" value="divorciado">
+                            <label for="opDivorciado">Divorciado</label>
+                        </div>
+                        <div class="estcivil">
+                            <input type="checkbox" id="opViuvo" name="opViuvo" value="viuvo">
+                            <label for="opViuvo">Viúvo</label>
+                        </div>
                     </div>
                 </div>
             </div>
+            
 
             <div class="input-box endereco" id="input-box">
                 <label><strong>Endereço</strong></label>
@@ -161,11 +192,11 @@
             </div>
 
             <div class="login-button">
-                <button class=".btn-esverdeado" type="submit" onclick="validarFormulario(); validarPWD()" >Concluir</button>
+                <button class=".btn-esverdeado" type="submit" onclick="validarFormulario() && validarPWD() && validaRadio()" >Concluir</button>
             </div>
         </form> 
     </section>
-
+</main>
     <footer class="footer  mt-auto py-3 bg-light">
       <div class="container d-flex justify-content-between">
           <div>
@@ -201,9 +232,6 @@
       </div>
   </footer>
 
- <script src="js/validarCEP.js"></script>
- <script src="js/validarPwd.js"></script>
- <script src="js/validarCampos.js"></script>
 
 </body>
 

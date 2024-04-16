@@ -19,3 +19,21 @@ function validarFormulario() {
     } 
 }
 
+
+function validaRadio() {
+    var radios = document.querySelectorAll('input[type="radio"][name="genero"]');
+    var checkedCount = 0;
+
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            checkedCount++;
+        }
+    }
+
+    if (checkedCount !== 1) {
+        alert("Selecione apenas um gênero!");
+        return false;
+    }
+    
+    return true;
+}
