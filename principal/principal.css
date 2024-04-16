@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'lemonade display';
+    src: url(../Angel-Lemona_Demo.ttf);
+}
+
+.texto{
+    font-family: 'lemonade display', sans-serif;
+    color: #033043;
+}
+
+.texto-cor{
+    color: #033043;
+}
+
+
+main, header{
+    background-color: #F2EFE6;
+}
+.overlay {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+  .servico:hover .overlay {
+    opacity: 0.5;
+  }
+  .servico:hover {
+    transform: scale(1.05);
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+
+  @media (min-width: 768px) {
+    .card img {
+      height: 11em;
+    }
+  }
+
+  .botao-azul{
+    background-color: #0A7273;
+    color: #e9e3d5;
+  }
+
+  .botao-azul:hover{
+    background-color: #fda521;
+    color: #033043
+  }
+
+  .botao-amarelo{
+    background-color: #fda521;
+    color: #033043
+  }
+
+  .botao-amarelo:hover{
+    background-color: #fda521;
+    color: #033043
+  }
+
+  .fundo-bege{
+    background-color: #e9e3d5;
+  }
+
+  .footer{
+    background-color: #033043;
+    color: #e9e3d5
+  }
