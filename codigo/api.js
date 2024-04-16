@@ -7,7 +7,9 @@ function salvarCadastro() {
     } else {
         cadastros = '[' + cadastro + ']';
     }
-
+    
+    const eventoCadastro = new CustomEvent('cadastroBemSucedido');
+    window.dispatchEvent(eventoCadastro);
     localStorage.removeItem("cadastros")
     localStorage.setItem("cadastros", cadastros)
 }
@@ -53,6 +55,6 @@ function logar() {
             cadastroValido = c;
         }
     });
-    alert(cadastroValido ? "Logado com sucesso!" : "Não foi possivel logar.")
+    alert(cadastroValido ? "Logado com sucesso!" : "Não foi possivel logar.");
     return cadastroValido;
 }

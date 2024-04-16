@@ -21,6 +21,25 @@
 main, header{
     background-color: #F2EFE6;
 }
+
+main {
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+  }
+  
+  header {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    /* Removendo o posicionamento fixo para que não sobreponha o conteúdo */
+  }
+  
+  .conteudo {
+    width: 500px;
+    margin-top: 20px; /* Reduzindo o espaço do topo */
+  }
   .botao-azul{
     background-color: #0A7273;
     color: #e9e3d5;
@@ -47,22 +66,6 @@ main, header{
 }
 
 
-header {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-#conteudo{
-    position: relative;
-    max-width:50%;
-    width: 100%;
-    background-color: #e9e3d5;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
-}
 
 #titulo{
     font-size: 1.5rem;
@@ -100,43 +103,38 @@ header {
     column-gap: 20px;
 }
 
-
-.gender-box,
-.opestcivil-box {
-    display: flex;
-    flex-direction: column;
+#gender-box{
+    margin-top: 20px;
 }
 
-.opcao-genero,
-.estado-civil {
+#opcao-genero {
     display: flex;
     column-gap: 50px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.genero,
-.estcivil {
+#genero{
     column-gap: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
 }
 
-.titulo-genero,
-.titulo-opcaociv {
-    color: #333;
-    font-size: 1rem;
-    margin-bottom: 8px;
+ #genero input{
+    cursor: pointer;
+    accent-color: #0a7273;
+
 }
 
-.form-check-input,
-.form-check-label,
-input[type="checkbox"] {
+#genero label{
     cursor: pointer;
 }
 
-
+#titulo-genero{
+color: #333;
+font-size:  1rem ;
+margin-bottom: 8px;
+}
 
 #endereco{
     display: flex;
