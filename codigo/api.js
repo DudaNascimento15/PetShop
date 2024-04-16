@@ -7,7 +7,9 @@ function salvarCadastro() {
     } else {
         cadastros = '[' + cadastro + ']';
     }
-
+    
+    const eventoCadastro = new CustomEvent('cadastroBemSucedido');
+    window.dispatchEvent(eventoCadastro);
     localStorage.removeItem("cadastros")
     localStorage.setItem("cadastros", cadastros)
 }
@@ -53,6 +55,5 @@ function logar() {
             cadastroValido = c;
         }
     });
-    
     return cadastroValido;
 }

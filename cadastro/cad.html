@@ -23,55 +23,82 @@
 </head>
 
 <body id="body">
-    <header class="site-header">
+    <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="https://nomoreworkhorse.files.wordpress.com/2016/06/bunnbar640.jpg" alt="Logo" width="50"
-                        height="50" class="d-inline-block align-text-top">
-                    Animalia
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../principal/principal.html">
+              <img
+                src="../logo.png"
+                alt="Logo"
+                width="50"
+                height="50"
+                class="d-inline-block align-text-top"
+                style="margin-left: 10px;"
+              />
+              <p class="texto">Animalia</p>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Adoção
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Cadastrar animal</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Adotar animal</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Consulta</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    PetShop
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Ração</a></li>
+                    <li><a class="dropdown-item" href="#">Roupa</a></li>
+                    <li><a class="dropdown-item" href="#">Brinquedo</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex ml-auto m-1" role="search">
+                <a href="../cadastro/cad.html"  class="btn btn-sm ml-auto botao-azul" type="button">
+                  Login
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Adoção
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cadastrar animal</a></li>
-                                <li><a class="dropdown-item" href="#">Adotar animal</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Consulta</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                PetShop
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Ração</a></li>
-                                <li><a class="dropdown-item" href="#">Roupa</a></li>
-                                <li><a class="dropdown-item" href="#">Brinquedo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex ml-auto m-1" role="search">
-                        <button class="btn btn-sm btn-primary ml-auto" type="button">Login</button>
-                    </form>
-                    <span class="navbar-text">
-                        <h6>Não logado</h6>
-                    </span>
-                </div>
+              </form>
+              <span class="navbar-text">
+                <h6>Não logado</h6>
+              </span>
             </div>
+          </div>
         </nav>
-    </header>
+      </header>
 <main>
     <section class="conteudo" id="conteudo">
         <h1 class="titulo" id="titulo">Cadastro</h1>

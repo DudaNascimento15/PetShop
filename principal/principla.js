@@ -218,4 +218,20 @@
     }
   }
 
-  window.addEventListener("load", createCarousel);
+  document.addEventListener('DOMContentLoaded', function() {
+    verificarLocalStorage();
+});
+
+function verificarLocalStorage() {
+    const usuarioLogado = localStorage.getItem('cadastros');
+    const botao = document.getElementById("meuBotao");
+
+    console.log(usuarioLogado);
+    console.log(botao.innerHTML);
+
+    if (usuarioLogado) {
+        botao.innerHTML = '<a href="../cadastro/login.html"  class="btn btn-sm ml-auto botao-azul" type="button">Login</a>';
+    } else {
+        botao.innerHTML = '<a href="../cadastro/cad.html"  class="btn btn-sm ml-auto botao-azul" type="button">Cadastro</a>';
+    }
+}
