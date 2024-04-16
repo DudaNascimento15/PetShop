@@ -53,6 +53,6 @@ function logar() {
             cadastroValido = c;
         }
     });
-    
+    alert(cadastroValido ? "Logado com sucesso!" : "Não foi possivel logar.")
     return cadastroValido;
 }
