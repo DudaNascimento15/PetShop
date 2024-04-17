@@ -9,6 +9,11 @@
     src: url(../../Angel-Lemona_Demo.ttf);
 }
 
+@font-face{
+    font-family: 'Dancing Script', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
+}
+
 .texto{
     font-family: 'lemonade display', sans-serif;
     color: #033043;
@@ -18,9 +23,6 @@
     color: #033043;
 }
 
-main, header{
-    background-color: #F2EFE6;
-}
 
 main {
     padding-top: 30px; 
@@ -29,16 +31,17 @@ main {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 100px);
+    background-color: #F2EFE6;
   }
   
   header {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    /* Removendo o posicionamento fixo para que não sobreponha o conteúdo */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  
+    background-color: #F2EFE6  ;
   }
   
   .conteudo {
     width: 500px;
-    margin-top: 20px; /* Reduzindo o espaço do topo */
+    margin-top: 20px;
   }
   .botao-azul{
     background-color: #0A7273;
@@ -61,11 +64,9 @@ main {
   }
 
   footer {
-    background-color: #033043; /* Cor de fundo desejada */
-    color:#033043; /* Cor do texto no footer */
+    background-color: #033043; 
+    color:#033043; 
 }
-
-
 
 #titulo{
     font-size: 1.5rem;
@@ -73,8 +74,10 @@ main {
     text-align: center;
     font-family: 'lemonade display', sans-serif;
     color: #033043;
+    margin-top: 50px;
 
 }
+
 
 #input-box{
     width: 100%;
@@ -98,9 +101,9 @@ main {
    padding: 0 15px;
 }
 
-#column{
+#coluna{
     display: flex;
-    column-gap: 20px;
+    column-gap: 10px;
 }
 
 #gender-box{
@@ -131,9 +134,9 @@ main {
 }
 
 #titulo-genero{
-color: #333;
-font-size:  1rem ;
-margin-bottom: 8px;
+  color: #333;
+   font-size:  1rem ;
+  margin-bottom: 8px;
 }
 
 #endereco{
@@ -147,6 +150,7 @@ main {
     align-items: center;
     min-height: calc(100vh - 100px);
   }
+
 
 .form button{
     height: 55px;
@@ -186,19 +190,19 @@ main {
     right: 0;
 }
 
-#span-senha{
+#span-senha-confirma{
     position: absolute;
-    right: 40px;
+    right: 355px;
     transform: translate(0,-50%);
-    top: 90%;
+    top:  234%;
     cursor:pointer;
 }
 
 #span-senha-senha{
     position: absolute;
-    right: 40px;
+    right:  355px;
     transform: translate(0,-50%);
-    top: 80.8%;
+    top: 216%;
     cursor:pointer;
 }
 
@@ -206,7 +210,7 @@ main {
     position: absolute;
     right: 40px;
     transform: translate(0,-50%);
-    top: 70%;
+    top: 90%;
     cursor:pointer;
 }
 
@@ -223,15 +227,15 @@ main {
 
 .eye-icon {
     position: absolute;
-    top: 50%;
-    right: 10px; /* Ajuste conforme necessário */
+    top: 90%;
+    right: 5px; 
     transform: translateY(-50%);
     cursor: pointer;
 }
 
 @media screen  and (max-width: 500px)
 {
-    #column{
+    #coluna{
         flex-wrap: wrap ;
     }
     #genero{

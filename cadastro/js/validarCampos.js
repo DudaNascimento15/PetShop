@@ -6,34 +6,34 @@ function validarFormulario() {
     campos.forEach(function(campo) {
         if (campo.value.trim() === '') {
             formularioValido = false;
-            campo.classList.add('campo-invalido'); // Adiciona uma classe para destacar o campo vazio
+            campo.classList.add('campo-invalido'); 
         } else {
-            campo.classList.remove('campo-invalido'); // Remove a classe de destaque se o campo estiver preenchido
+            campo.classList.remove('campo-invalido');
         }
     });
 
     if (formularioValido) {
-        alert('Formulário preenchido corretamente!'); // Ou envie o formulário, dependendo do seu caso
+        alert('Formulário preenchido corretamente!');
     } else {
-        alert('Por favor, preencha todos os campos obrigatórios.'); // Exibe uma mensagem de erro
+        alert('Por favor, preencha todos os campos obrigatórios.'); 
     } 
 }
 
 
 function validaRadio() {
-    var radios = document.querySelectorAll('input[type="radio"][name="genero"]');
-    var checkedCount = 0;
+    var radio = document.querySelectorAll('input[type="radio"][name="genero"]');
+    var checked = false;
 
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            checkedCount++;
+    for (var i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            checked = true;
+            break;
         }
     }
 
-    if (checkedCount !== 1) {
-        alert("Selecione apenas um gênero!");
+    if (!checked) {
+        alert("Selecione um gênero!");
         return false;
     }
-    
-    return true;
+    return true; 
 }

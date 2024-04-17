@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/stylescad.css" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,6 +24,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -33,6 +39,10 @@
     />
     <title>Cadastro</title>
     <script src="/codigo/api.js"></script>
+    <script src="js/validarCEP.js"></script>
+    <script src="js/validarPwd.js"></script>
+    <script src="js/validarCampos.js"></script>
+    <script src="js/alteracaoTema.js"></script>
   </head>
 
   <body id="body">
@@ -116,10 +126,15 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="maintema">
       <section class="conteudo" id="conteudo">
-        <h1 class="titulo" id="titulo">Cadastro</h1>
+        <select class="form-select" aria-label="Opções de tema" id="opcaoTema" onchange="mudaTema()">
+            <option value="normal" >Normal</option>
+            <option value="custom" >Custom</option>
+        </select>
+        <h1 class="titulo" id="titulo" >Cadastro</h1>
         <form action="#" class="form" id="form" onsubmit="salvarCadastro()">
+
           <div class="input-box" id="input-box">
             <label for="nome"><strong>Nome</strong></label>
             <input
@@ -133,7 +148,7 @@
           </div>
 
           <div class="input-box" id="input-box">
-            <label for="sobrenome"><strong>Sobrenome</strong></label>
+            <label for="sobrenome" id="label"><strong>Sobrenome</strong></label>
             <input
               type="text"
               name="sobrenome"
@@ -145,7 +160,7 @@
           </div>
 
           <div class="mb-3 input-box" id="input-box">
-            <label for="email" class="form-label"><strong>Email</strong></label>
+            <label for="email" class="form-label" id="label"><strong>Email</strong></label>
             <input
               type="email"
               class="form-control"
@@ -155,9 +170,9 @@
             />
           </div>
 
-          <div class="column" id="column">
+          <div class="coluna" id="coluna">
             <div class="input-box" id="input-box">
-              <label><strong>Data de nascimento</strong></label>
+              <label id="label"><strong>Data de nascimento</strong></label>
               <input
                 type="date"
                 name="dtnasci"
@@ -167,7 +182,7 @@
             </div>
 
             <div class="input-box" id="input-box">
-              <label for="number"><strong>Celular</strong></label>
+              <label for="number" id="label"><strong>Celular</strong></label>
               <input
                 type="tel"
                 name="Celular"
@@ -179,17 +194,19 @@
             </div>
           </div>
 
+
+         <div class="coluna" id="coluna">
           <div class="gender-box" id="gender-box">
             <label id="titulo-genero" for="opcao-genero"
               ><strong>Gênero</strong></label
             >
             <div class="form-check" id="opcao-genero">
-              <div class="genero" id="genero">
+              <div class="genero" id="genero" >
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="rdFemino"
                   id="rdFemino"
+                  name="genero"
                 />
                 <label class="form-check-label" for="rdFemino">
                   Feminino
@@ -200,8 +217,8 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="rdMasculino"
                   id="rdMasculino"
+                  name="genero"
                 />
                 <label class="form-check-label" for="rdMasculino">
                   Masculino
@@ -211,8 +228,8 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="rdOutros"
                   id="rdOutros"
+                  name="genero"
                   checked
                 />
                 <label class="form-check-label" for="rdOutros">
@@ -221,10 +238,30 @@
               </div>
             </div>
           </div>
+        
+          <div class="opestcivil-box">
+            <label class="titulo-opcaociv" for="estado-civil"><strong>Quais serviços você deseja?</strong></label>
+            <div class="form-check estado-civil">
+                <div class="estcivil">
+                    <input type="checkbox" id="opSolteiro" name="genero" value="solteiro">
+                    <label for="opSolteiro">Adotar animal</label>
+                </div>
+                <div class="estcivil">
+                    <input type="checkbox" id="opCasado" name="genero" value="casado">
+                    <label for="opCasado">Veterinário</label>
+                </div>
+                <div class="estcivil">
+                    <input type="checkbox" id="opSeparado" name="genero" value="separado">
+                    <label for="opSeparado">PetShop</label>
+                </div>              
+            </div> 
+          </div>  
+         </div> 
+
 
           <div class="input-box endereco" id="input-box">
             <label><strong>Endereço</strong></label>
-            <div class="columns" id="column">
+            <div class="coluna" id="coluna">
               <input
                 type="type"
                 name="CEP"
@@ -235,7 +272,7 @@
                 required
               />
             </div>
-            <div class="columns" id="column">
+            <div class="coluna" id="coluna">
               <input
                 type="type"
                 name="rua"
@@ -253,7 +290,7 @@
                 required
               />
             </div>
-            <div class="columns" id="column">
+            <div class="coluna" id="coluna">
               <input
                 type="type"
                 name="cidade"
@@ -295,8 +332,7 @@
             </span>
           </div>
           <div class="input-box" id="input-box">
-            <label for="ConfirmPassaword"
-              ><strong> Confirme sua senha</strong></label
+            <label for="ConfirmPassaword"><strong> Confirme sua senha</strong></label
             >
             <input
               type="password"
@@ -306,7 +342,7 @@
               class="form-control"
               required
             />
-            <span id="span-senha">
+            <span id="span-senha-confirma">
               <i
                 class="fa fa-regular fa-eye"
                 aria-hidden="true"
@@ -392,9 +428,10 @@
         </div>
       </div>
     </footer>
+    
+    <script>$('input[type="checkbox"]').on('change', function() {
+            $('input[type="checkbox"]').not(this).prop('checked', false);});
+            </script>
 
-    <script src="js/validarCEP.js"></script>
-    <script src="js/validarPwd.js"></script>
-    <script src="js/validarCampos.js"></script>
   </body>
 </html>
