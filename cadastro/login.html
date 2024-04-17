@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="../logo.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -99,18 +100,15 @@
                 </ul>
               </li>
             </ul>
-            <form class="d-flex ml-auto m-1" role="search">
+            <form class="d-flex ml-auto m-1" id="meuBotao" role="search">
               <a
-                href="../cadastro/login.html"
+                href="../cadastro/cad.html"
                 class="btn btn-sm ml-auto botao-azul"
                 type="button"
               >
-                Login
+                Cadastro
               </a>
             </form>
-            <span class="navbar-text">
-              <h6>Não logado</h6>
-            </span>
           </div>
         </div>
       </nav>
@@ -121,7 +119,9 @@
         <div>
           <form action="#" class="form" id="form" onsubmit="logar()">
             <div class="mb-3 input-box" id="input-box">
-              <label for="email" class="form-label"><strong>Email</strong></label>
+              <label for="email" class="form-label"
+                ><strong>Email</strong></label
+              >
               <input
                 type="email"
                 class="form-control"
@@ -134,23 +134,23 @@
               <label for="password" class="form-label"
                 ><strong>Senha</strong></label
               >
-              <div  class="input-with-icon">
+              <div class="input-with-icon">
                 <input
-                type="password"
-                id="password"
-                class="form-control"
-                name="password"
-                placeholder="Senha"
-                required
-              />
-              <span id="span-senha-login" class="eye-icon">
-                <i
-                  class="fa fa-regular fa-eye"
-                  aria-hidden="true"
-                  id="olho-senha"
-                  onclick="mostrarEsconder()"
-                ></i>
-              </span>
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Senha"
+                  required
+                />
+                <span id="span-senha-login" class="eye-icon">
+                  <i
+                    class="fa fa-regular fa-eye"
+                    aria-hidden="true"
+                    id="olho-senha"
+                    onclick="mostrarEsconder()"
+                  ></i>
+                </span>
               </div>
             </div>
             <div class="login-button">
@@ -160,7 +160,10 @@
         </div>
       </section>
     </main>
-    <footer class="footer mt-auto py-3 bg-light" style="background-color: #033043;">
+    <footer
+      class="footer mt-auto py-3 bg-light"
+      style="background-color: #033043"
+    >
       <div class="container d-flex justify-content-between">
         <div>
           <h5>Contatos</h5>

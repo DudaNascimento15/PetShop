@@ -1,12 +1,11 @@
-
 @font-face {
-    font-family: 'Poppins', sans-serif; 
-    src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 }
 
 @font-face {
-    font-family: 'lemonade display';
-    src: url(../../Angel-Lemona_Demo.ttf);
+  font-family: "lemonade display";
+  src: url(../../Angel-Lemona_Demo.ttf);
 }
 
 @font-face{
@@ -14,15 +13,23 @@
     src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
 }
 
-.texto{
-    font-family: 'lemonade display', sans-serif;
-    color: #033043;
+@font-face{
+    font-family: 'Dancing Script', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
 }
 
-.texto-cor{
-    color: #033043;
+.texto {
+  font-family: "lemonade display", sans-serif;
+  color: #033043;
 }
 
+.texto-cor {
+  color: #033043;
+}
+
+main, header{
+    background-color: #F2EFE6;
+}
 
 main {
     padding-top: 30px; 
@@ -48,20 +55,20 @@ main {
     color: #e9e3d5;
   }
 
-  .botao-azul:hover{
-    background-color: #fda521;
-    color: #033043
-  }
+.botao-azul:hover {
+  background-color: #fda521;
+  color: #033043;
+}
 
-  .botao-amarelo{
-    background-color: #fda521;
-    color: #033043
-  }
+.botao-amarelo {
+  background-color: #fda521;
+  color: #033043;
+}
 
-  .botao-amarelo:hover{
-    background-color: #fda521;
-    color: #033043
-  }
+.botao-amarelo:hover {
+  background-color: #fda521;
+  color: #033043;
+}
 
   footer {
     background-color: #033043; 
@@ -79,26 +86,26 @@ main {
 }
 
 
-#input-box{
-    width: 100%;
-    margin-top: 20px;
+#input-box {
+  width: 100%;
+  margin-top: 20px;
 }
 
-#input-box label{
-    color: #333;
+#input-box label {
+  color: #333;
 }
 
-#input-box input{
-   position: relative;
-   height: 50px; 
-   width: 100%;
-   outline: none;
-   font: 1rem;
-   color: #707070;
-   margin-top: 8px;
-   border: 1px solid #ddd;
-   border-radius: 6px;
-   padding: 0 15px;
+#input-box input {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
 }
 
 #coluna{
@@ -106,31 +113,30 @@ main {
     column-gap: 10px;
 }
 
-#gender-box{
-    margin-top: 20px;
+#gender-box {
+  margin-top: 20px;
 }
 
 #opcao-genero {
-    display: flex;
-    column-gap: 50px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-#genero{
-    column-gap: 5px;
-    cursor: pointer;
-    flex-wrap: wrap;
+#genero {
+  column-gap: 5px;
+  cursor: pointer;
+  flex-wrap: wrap;
 }
 
- #genero input{
-    cursor: pointer;
-    accent-color: #0a7273;
-
+#genero input {
+  cursor: pointer;
+  accent-color: #0a7273;
 }
 
-#genero label{
-    cursor: pointer;
+#genero label {
+  cursor: pointer;
 }
 
 #titulo-genero{
@@ -139,98 +145,96 @@ main {
   margin-bottom: 8px;
 }
 
-#endereco{
-    display: flex;
-    margin-top: 15px;
+#endereco {
+  display: flex;
+  margin-top: 15px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 100px);
-  }
-
-
-.form button{
-    height: 55px;
-    width: 100%;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    border: none;
-    margin-top: 6px;
-    cursor: pointer;
-    border-radius: 6px;
-    background-color: #0a7273;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
 }
 
-.form button:hover{
-    background-color: #539c9d;
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  margin-top: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #0a7273;
+  justify-content: center;
+  align-items: center;
+}
+
+.form button:hover {
+  background-color: #539c9d;
 }
 
 #page-container {
-    position: relative;
-    min-height: 100vh;
-  }
-
-.conteudo{
-    width: 500px;
-    margin-top: 60px;
+  position: relative;
+  min-height: 100vh;
 }
 
-.site-header{
-    position: relative;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+.conteudo {
+  width: 500px;
+  margin-top: 60px;
 }
 
-#span-senha-confirma{
-    position: absolute;
-    right: 355px;
-    transform: translate(0,-50%);
-    top:  234%;
-    cursor:pointer;
+.site-header {
+  position: relative;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-#span-senha-senha{
-    position: absolute;
-    right:  355px;
-    transform: translate(0,-50%);
-    top: 216%;
-    cursor:pointer;
+#span-senha {
+  position: absolute;
+  right: 40px;
+  transform: translate(0, -50%);
+  top: 90%;
+  cursor: pointer;
 }
 
-#span-senha-login{
-    position: absolute;
-    right: 40px;
-    transform: translate(0,-50%);
-    top: 90%;
-    cursor:pointer;
+#span-senha-senha {
+  position: absolute;
+  right: 40px;
+  transform: translate(0, -50%);
+  top: 80.8%;
+  cursor: pointer;
 }
 
-.fa{
-    font-size: 20px;
-    color: #0a7273 ; 
-     
+#span-senha-login {
+  position: absolute;
+  right: 40px;
+  transform: translate(0, -50%);
+  top: 70%;
+  cursor: pointer;
+}
+
+.fa {
+  font-size: 20px;
+  color: #0a7273;
 }
 
 .input-with-icon {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .eye-icon {
-    position: absolute;
-    top: 90%;
-    right: 5px; 
-    transform: translateY(-50%);
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajuste conforme necessário */
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 @media screen  and (max-width: 500px)
