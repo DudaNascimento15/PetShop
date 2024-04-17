@@ -8,6 +8,16 @@
   src: url(../../Angel-Lemona_Demo.ttf);
 }
 
+@font-face{
+    font-family: 'Dancing Script', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
+}
+
+@font-face{
+    font-family: 'Dancing Script', sans-serif; 
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
+}
+
 .texto {
   font-family: "lemonade display", sans-serif;
   color: #033043;
@@ -17,32 +27,33 @@
   color: #033043;
 }
 
-main,
-header {
-  background-color: #f2efe6;
+main, header{
+    background-color: #F2EFE6;
 }
 
 main {
-  padding-top: 10px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 100px);
-}
-
-header {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-.conteudo {
-  width: 500px;
-  margin-top: 50px; 
-}
-.botao-azul {
-  background-color: #0a7273;
-  color: #e9e3d5;
-}
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    background-color: #F2EFE6;
+  }
+  
+  header {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);  
+    background-color: #F2EFE6  ;
+  }
+  
+  .conteudo {
+    width: 500px;
+    margin-top: 20px;
+  }
+  .botao-azul{
+    background-color: #0A7273;
+    color: #e9e3d5;
+  }
 
 .botao-azul:hover {
   background-color: #fda521;
@@ -59,18 +70,21 @@ header {
   color: #033043;
 }
 
-footer {
-  background-color: #033043; /* Cor de fundo desejada */
-  color: #033043; /* Cor do texto no footer */
+  footer {
+    background-color: #033043; 
+    color:#033043; 
 }
 
-#titulo {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  font-family: "lemonade display", sans-serif;
-  color: #033043;
+#titulo{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'lemonade display', sans-serif;
+    color: #033043;
+    margin-top: 50px;
+
 }
+
 
 #input-box {
   width: 100%;
@@ -94,9 +108,9 @@ footer {
   padding: 0 15px;
 }
 
-#column {
-  display: flex;
-  column-gap: 20px;
+#coluna{
+    display: flex;
+    column-gap: 10px;
 }
 
 #gender-box {
@@ -125,9 +139,9 @@ footer {
   cursor: pointer;
 }
 
-#titulo-genero {
+#titulo-genero{
   color: #333;
-  font-size: 1rem;
+   font-size:  1rem ;
   margin-bottom: 8px;
 }
 
@@ -223,14 +237,16 @@ main {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-  #column {
-    flex-wrap: wrap;
-  }
-  #genero {
-    row-gap: 15px;
-  }
-  #opcao-genero {
-    row-gap: 15px;
-  }
+@media screen  and (max-width: 500px)
+{
+    #coluna{
+        flex-wrap: wrap ;
+    }
+    #genero{
+        row-gap: 15px;
+    }
+    #opcao-genero{
+        row-gap: 15px;
+    }
+    
 }
